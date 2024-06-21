@@ -31,7 +31,7 @@ def evaluating_classification_model(TP, FP, FN):
 # Using map function to modify to code to look cleanner
 TP, FP, FN = map(int, user_input())
 TP, FP, FN = testing_input(TP, FP, FN)
-evaluating_classification_model(TP, FP, FN)
+round(evaluating_classification_model(TP, FP, FN), 2)
 
 
 

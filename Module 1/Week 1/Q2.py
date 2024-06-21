@@ -3,13 +3,15 @@ import math
 def is_number(number):
     if number.isnumeric():
         return float(number)
+    elif number.isnumeric() <= 0:
+        return float(number)
     return False
 
 #Sigmoid Function:
 def sigmoid_function(x):
     e = math.e
-    sigmoid_result = 1 / (1 + pow(e, -x))
-    sigmoid_result = 1 / (1 + math.exp(-x))
+    # sigmoid_result = 1 / (1 + pow(e, -x))
+    sigmoid_result = 1 / (1 + math.exp(-float(x)))
     return sigmoid_result
 
 #ReLU Function:
@@ -22,9 +24,10 @@ def relu_function(x):
 
 #ELU Function:
 def elu_function(x):
+    
     alpha = 0.01
-    if x <= 0:
-        elu_result = alpha * (math.exp(x) - 1)
+    if float(x) <= 0:
+        elu_result = alpha * (math.exp(float(x)) - 1)
     else:
         elu_result = x
     return elu_result
