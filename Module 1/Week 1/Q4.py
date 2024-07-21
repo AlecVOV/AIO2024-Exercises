@@ -49,10 +49,10 @@ def main():
         n = int(input("Re-enter (n): "))
 
     # Calculate and print result
-    print(f" sin({x}): {approx_sin(x, n):.8f}")
-    print(f" cos({x}): {approx_cos(x, n):.8f}")
-    print(f" sinh({x}): {approx_sinh(x, n):.8f}")
-    print(f" cosh({x}): {approx_cosh(x, n):.8f}")
+    print(f" sin({x}): {approx_sin(x, n):.4f}")
+    print(f" cos({x}): {approx_cos(x, n):.2f}")
+    print(f" sinh({x}): {approx_sinh(x, n):.2f}")
+    print(f" cosh({x}): {approx_cosh(x, n):.2f}")
 
 
 main()
